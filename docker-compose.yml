@@ -1,0 +1,10 @@
+version: '3.1'
+
+services:
+  cyferd:
+    build: .
+    container_name: cyferd
+    command: "tail -f /dev/null"
+    volumes:
+      - .:/src/cyferd:rw
+      - /src/cyferd/node_modules
